@@ -2,6 +2,11 @@ package problem1;
 
 public class UnionFind {
 
+  private final int[] array;
+
+  public UnionFind(int numOfElements) {
+    this.array = initializeArray(numOfElements);
+  }
 
   public int[] initializeArray(int numOfElements) {
     int[] nums = new int[numOfElements];
@@ -13,6 +18,10 @@ public class UnionFind {
 
   public boolean connected(int[] list, int a, int b) {
     return list[a] == list[b];
+  }
+
+  public int[] getArray() {
+    return array;
   }
 
   public void makeUnion(int[] list, int a, int b) {
