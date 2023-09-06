@@ -8,21 +8,21 @@ public class Main {
 
     var uf = new UnionFind();
 
-    int[] arr = uf.initializeArray(10);
+    int[] list = uf.initializeArray(10);
 
-    System.out.println(Arrays.toString(arr));
+    System.out.println(Arrays.toString(list));
 
-    uf.makeUnion(arr, 0, 1);
-    uf.makeUnion(arr, 6, 7);
+    uf.makeUnion(list, 0, 1);
+    uf.makeUnion(list, 6, 7);
 
-    System.out.println(Arrays.toString(arr));
+    System.out.println(Arrays.toString(list));
 
-    uf.makeUnion(arr, 1, 2);
+    uf.makeUnion(list, 1, 2);
 
-    System.out.println(Arrays.toString(arr));
+    System.out.println(Arrays.toString(list));
 
-    System.out.println(uf.connected(arr, 0, 2));
-    System.out.println(uf.connected(arr, 0, 3));
+    System.out.println(uf.connected(list, 0, 2));
+    System.out.println(uf.connected(list, 0, 3));
 
   }
 
