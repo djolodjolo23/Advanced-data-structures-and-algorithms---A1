@@ -5,10 +5,10 @@ public class WQUnionFind {
   private int[] size;
 
   public WQUnionFind(int num) {
-    initialize(num);
+    initializeArray(num);
   }
 
-  private void initialize(int num) {
+  private void initializeArray(int num) {
     this.parent = new int[num];
     this.size = new int [num];
     for (int i = 0; i < num; i++) {

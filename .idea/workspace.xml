@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68d6ecd5-eb79-4c1d-9b81-2a1f1d15e2c4" name="Changes" comment="Problem 2 completed.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/problem3/MyFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/problem3/Timer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/problem4/Main.java" afterDir="false" />
+    <list default="true" id="68d6ecd5-eb79-4c1d-9b81-2a1f1d15e2c4" name="Changes" comment="Problems 3 and 4 completed.">
+      <change afterPath="$PROJECT_DIR$/src/problem5/BruteForce3Sum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/problem5/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/problem1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem1/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/problem1/UnionFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem1/UnionFind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem2/WQUnionFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem2/WQUnionFind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem3/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem3/Timer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem4/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -56,7 +55,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.problem4.Main">
+  <component name="RunManager" selected="Application.problem5.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="problem1.Main" />
       <module name="assignment1" />
@@ -96,8 +95,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="problem5.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="problem5.Main" />
+      <module name="assignment1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="problem5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.problem5.Main" />
         <item itemvalue="Application.problem4.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.problem2.Main" />
@@ -115,7 +128,7 @@
       <workItem from="1693984602081" duration="3626000" />
       <workItem from="1694005349694" duration="2707000" />
       <workItem from="1694020534655" duration="4431000" />
-      <workItem from="1694070711798" duration="3212000" />
+      <workItem from="1694070711798" duration="6602000" />
     </task>
     <task id="LOCAL-00001" summary="Problem 1 finished.">
       <option name="closed" value="true" />
@@ -141,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694014616054</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Problems 3 and 4 completed.">
+      <option name="closed" value="true" />
+      <created>1694076037431</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1694076037431</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,7 +172,8 @@
     <MESSAGE value="Problem 1 finished." />
     <MESSAGE value="Working on problem 2" />
     <MESSAGE value="Problem 2 completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="Problem 2 completed." />
+    <MESSAGE value="Problems 3 and 4 completed." />
+    <option name="LAST_COMMIT_MESSAGE" value="Problems 3 and 4 completed." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

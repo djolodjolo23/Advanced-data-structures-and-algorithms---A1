@@ -21,8 +21,6 @@ public class Main {
 
     String time2 = timer.timeIt(() -> wqUf.makeUnion(1, 2));
 
-
-
     System.out.println(time);
     System.out.println(time2);
   }

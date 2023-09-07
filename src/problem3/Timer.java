@@ -7,9 +7,9 @@ public class Timer{
   private long elapsedTime;
 
 
-  public String timeIt(MyFunction function) { // I want to pass a void function as a parameter
+  public String timeIt(MyFunction function) {
     start();
-    function.execute(); // function to be executed
+    function.execute();
     stop();
     elapsedTime = getElapsedTime();
     return toString();
@@ -36,15 +36,11 @@ public class Timer{
     long milliseconds = elapsedTime / 1_000_000;
     long microseconds = (elapsedTime % 1_000_000) / 1_000;
     long nanoseconds = elapsedTime % 1_000;
-
     return
         "Elapsed time = " + milliseconds + "ms, " +
         microseconds + " µs, " +
         nanoseconds + " ns.";
   }
-
-
-
 
 
 }
