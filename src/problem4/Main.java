@@ -16,7 +16,6 @@ public class Main {
     var timer = new Timer();
 
 
-
     String time = timer.timeIt(() -> uf.makeUnion(1, 2));
 
     String time2 = timer.timeIt(() -> wqUf.makeUnion(1, 2));

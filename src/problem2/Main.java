@@ -1,7 +1,6 @@
 package problem2;
 
 import java.util.Arrays;
-import problem1.UnionFind;
 
 public class Main {
 
