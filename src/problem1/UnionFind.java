@@ -24,14 +24,14 @@ public class UnionFind {
     return array;
   }
 
-  public void makeUnion(int[] list, int a, int b) {
-    int a_id = list[a];
-    int b_id = list[b];
+  public void makeUnion(int a, int b) {
+    int a_id = array[a];
+    int b_id = array[b];
 
-    for (int ix = 0; ix < list.length; ix++) {
-      int value = list[ix];
+    for (int ix = 0; ix < array.length; ix++) {
+      int value = array[ix];
       if (value == a_id) {
-        list[ix] = b_id;
+        array[ix] = b_id;
       }
     }
   }
