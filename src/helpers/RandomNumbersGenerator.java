@@ -10,6 +10,14 @@ public class RandomNumbersGenerator {
         random = new Random();
     }
 
+    public int[] getRandomNumbers (int arraySize, int maxNum) {
+        int[] randomArray = new int[arraySize];
+        for (int i=0; i < arraySize; i++) {
+            randomArray[i] = random.nextInt(maxNum + 1);
+        }
+        return randomArray;
+    }
+
 
 
 

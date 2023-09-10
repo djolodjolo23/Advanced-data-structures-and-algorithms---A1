@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class Smart3Sum {
 
-    private final int[] array;
+    private int[] array;
 
     public Smart3Sum(int numOfElements) {
         this.array = initializeArray(numOfElements);
@@ -20,6 +20,10 @@ public class Smart3Sum {
             nums[i] = i;
         }
         return nums;
+    }
+
+    private void setArray(int[] array) {
+        this.array = array;
     }
 
     public List<List<Integer>> findCombinations(int target) {

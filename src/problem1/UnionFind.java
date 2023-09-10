@@ -2,7 +2,7 @@ package problem1;
 
 public class UnionFind {
 
-  private final int[] array;
+  private int[] array;
 
   public UnionFind(int numOfElements) {
     this.array = initializeArray(numOfElements);
@@ -15,6 +15,12 @@ public class UnionFind {
     }
     return nums;
   }
+
+  public void setArray(int[] array) {
+    this.array = array;
+  }
+
+
 
   public boolean connected(int[] list, int a, int b) {
     return list[a] == list[b];

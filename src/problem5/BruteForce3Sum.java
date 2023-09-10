@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BruteForce3Sum {
 
-  private final int[] array;
+  private int[] array;
 
   public BruteForce3Sum(int num) {
     this.array = initializeArray(num);
@@ -18,6 +18,12 @@ public class BruteForce3Sum {
     }
     return nums;
   }
+
+  private void setArray(int[] array) {
+    this.array = array;
+  }
+
+
 
 
   public List<List<Integer>> findCombinations(int targetValue) {

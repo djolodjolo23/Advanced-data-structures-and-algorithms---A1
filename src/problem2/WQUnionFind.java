@@ -17,6 +17,13 @@ public class WQUnionFind {
     }
   }
 
+  private void setArray(int[] array) {
+    for (int i = 0; i < array.length; i++) {
+      parent[i] = array[i];
+      size[i] = 1;
+    }
+  }
+
 
   public int[] getParent() {
     return parent;

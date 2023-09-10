@@ -1,5 +1,6 @@
 package problem3;
 
+
 public class Timer{
   private long startTime;
   private long endTime;
@@ -7,12 +8,19 @@ public class Timer{
   private long elapsedTime;
 
 
-  public String timeIt(MyFunction function) {
+  public String timeItString(MyMethod method) {
     start();
-    function.execute();
+    method.execute();
     stop();
     elapsedTime = getElapsedTime();
     return toString();
+  }
+
+  public long timeItNanoTime(MyMethod method) {
+    start();
+    method.execute();
+    stop();
+    return getElapsedTime();
   }
 
   private void start() {
@@ -30,6 +38,17 @@ public class Timer{
       throw new IllegalStateException("Timer not started or stopped correctly.");
     }
   }
+
+  private long findAverageRunningTime(long[] times) {
+    long avg = 0;
+    int avg_counter = 0;
+    for (long t : times) {
+      avg += t;
+      avg_counter += 1;
+    }
+    return avg / avg_counter;
+  }
+
 
   @Override
   public String toString() {

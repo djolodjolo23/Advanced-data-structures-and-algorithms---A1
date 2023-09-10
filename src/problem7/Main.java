@@ -4,8 +4,6 @@ import problem3.Timer;
 import problem5.BruteForce3Sum;
 import problem6.Smart3Sum;
 
-import java.sql.Time;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -16,8 +14,8 @@ public class Main {
 
         var timer = new Timer();
 
-        String time1 = timer.timeIt (() -> bf3s.findCombinations(180));
-        String time2 = timer.timeIt(() -> sm3s.findCombinations(180));
+        String time1 = timer.timeItString(() -> bf3s.findCombinations(180));
+        String time2 = timer.timeItString(() -> sm3s.findCombinations(180));
 
         System.out.println(time1);
         System.out.println(time2);
