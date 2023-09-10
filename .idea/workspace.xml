@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68d6ecd5-eb79-4c1d-9b81-2a1f1d15e2c4" name="Changes" comment="Problem 5 solved.">
-      <change afterPath="$PROJECT_DIR$/src/problem6/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/problem6/Smart3Sum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/problem7/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/problem2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/problem4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem4/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/RandomNumbersGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/RandomNumbersGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem5/BruteForce3Sum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem5/BruteForce3Sum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem6/Smart3Sum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem6/Smart3Sum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +45,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/jelen/OneDrive/Documents/1dv516/1dv516-assignment1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -54,7 +57,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.problem5.Main">
+  <component name="RunManager" selected="Application.problem7.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="problem1.Main" />
       <module name="assignment1" />
@@ -107,8 +110,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="problem7.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="problem7.Main" />
+      <module name="assignment1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="problem7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.problem7.Main" />
         <item itemvalue="Application.problem5.Main" />
         <item itemvalue="Application.problem4.Main" />
         <item itemvalue="Application.Main" />
@@ -128,6 +145,7 @@
       <workItem from="1694005349694" duration="2707000" />
       <workItem from="1694020534655" duration="4431000" />
       <workItem from="1694070711798" duration="7930000" />
+      <workItem from="1694181795942" duration="2530000" />
     </task>
     <task id="LOCAL-00001" summary="Problem 1 finished.">
       <option name="closed" value="true" />
