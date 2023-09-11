@@ -8,9 +8,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        var bf3s = new BruteForce3Sum(1000);
+        var bf3s = new BruteForce3Sum(100);
 
-        var sm3s = new Smart3Sum(1000);
+        var sm3s = new Smart3Sum(100);
 
         var timer = new Timer();
 

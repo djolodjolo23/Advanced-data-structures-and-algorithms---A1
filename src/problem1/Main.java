@@ -1,6 +1,8 @@
 package problem1;
 
+import helpers.Helper;
 import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
@@ -8,7 +10,7 @@ public class Main {
 
     var uf = new UnionFind(10);
 
-
+    List<UnionFind> ufs = Helper.getAListOfAlgorithms(() -> new UnionFind(10), 10, 2);
     System.out.println(Arrays.toString(uf.getArray()));
 
     uf.makeUnion(0, 1);

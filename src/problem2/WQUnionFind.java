@@ -12,12 +12,14 @@ public class WQUnionFind {
     this.parent = new int[num];
     this.size = new int [num];
     for (int i = 0; i < num; i++) {
-      size[i] = 1; // for tracking size
+      size[i] = 1;
       parent[i] = i;
     }
   }
 
-  private void setArray(int[] array) {
+  public void setArray(int[] array) {
+    this.parent = new int[array.length];
+    this.size = new int[array.length];
     for (int i = 0; i < array.length; i++) {
       parent[i] = array[i];
       size[i] = 1;

@@ -49,6 +49,26 @@ public class Timer{
     return avg / avg_counter;
   }
 
+  public long findWorstRunningTime(long[] times) {
+    long worstTime = times[0];
+    for (long time: times) {
+      if (time < worstTime) {
+        worstTime = time;
+      }
+    }
+    return worstTime;
+  }
+
+  public long findBestRunningTime(long[] times) {
+    long bestTime = times[0];
+    for (long time: times) {
+      if (time > bestTime) {
+        bestTime = time;
+      }
+    }
+    return bestTime;
+  }
+
 
   @Override
   public String toString() {
