@@ -1,16 +1,17 @@
 package problem6;
 
 
+import helpers.AlgorithmInit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 
-public class Smart3Sum {
+public class Smart3Sum implements AlgorithmInit {
 
     private int[] array;
 
-    public Smart3Sum(int numOfElements) {
-        this.array = initializeArray(numOfElements);
+    public Smart3Sum() {
+
     }
 
 
@@ -49,4 +50,13 @@ public class Smart3Sum {
         }
         return result;
     }
+
+  @Override
+  public void init(int base, int upToExponent) {
+    int[] nums = new int[(int) Math.pow(base, upToExponent)];
+    for (int i = 0; i < nums.length; i++) {
+      nums[i] = i;
+    }
+    this.array = nums;
+  }
 }

@@ -1,7 +1,7 @@
 package problem4;
 
-import helpers.RandomNumbersGenerator;
-import java.util.Arrays;
+import helpers.Helper;
+import java.util.List;
 import problem1.UnionFind;
 import problem2.WQUnionFind;
 import problem3.Timer;
@@ -10,24 +10,37 @@ public class Main {
 
   public static void main(String[] args) {
 
-    var uf = new UnionFind(1000000);
 
-    var wqUf = new WQUnionFind(1000000);
+
+    List<UnionFind> unionFindList = Helper.getAListOfAlgorithms(UnionFind::new, 5, 7);
+    List<WQUnionFind> wqUnionFindList = Helper.getAListOfAlgorithms(WQUnionFind::new, 5, 7);
+
+
 
 
     var timer = new Timer();
 
-    var randGenerator = new RandomNumbersGenerator();
+
+    for (UnionFind uf : unionFindList) {
+      // skipping the first one bcs of JIT compilation warm up
+      if (uf != unionFindList.get(0)) {
+        System.out.println(timer.timeItNanoTime(() -> uf.makeUnion(3, 4)));
+        System.out.println(timer.timeItNanoTime(() -> uf.connected(3, 4)));
+      }
+    }
 
 
-    String time = timer.timeItString(() -> uf.makeUnion(1, 2));
+    System.out.println();
 
-    String time2 = timer.timeItString(() -> wqUf.makeUnion(1, 2));
-    String time3 = timer.timeItString(() -> wqUf.makeUnion(3, 4));
+    for (WQUnionFind wquf : wqUnionFindList) {
+      // skipping the first one bcs of JIT compilation warm up
+      long rt = timer.timeItNanoTime(() -> wquf.makeUnion(3, 4));
+      if (wquf != wqUnionFindList.get(0)) {
+        System.out.println(rt);
+      }
+    }
 
-    wqUf.setArray(randGenerator.getRandomNumbers(10, 10000));
 
-    System.out.println(Arrays.toString(wqUf.getParent()));
 
 
 

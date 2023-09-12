@@ -8,9 +8,9 @@ public class Main {
 
   public static void main(String[] args) {
 
-    var uf = new UnionFind(10);
+    var uf = new UnionFind();
+    uf.init(10, 2);
 
-    List<UnionFind> ufs = Helper.getAListOfAlgorithms(() -> new UnionFind(10), 10, 2);
     System.out.println(Arrays.toString(uf.getArray()));
 
     uf.makeUnion(0, 1);
@@ -24,8 +24,8 @@ public class Main {
 
     System.out.println(Arrays.toString(uf.getArray()));
 
-    System.out.println(uf.connected(uf.getArray(), 0, 2));
-    System.out.println(uf.connected(uf.getArray(), 0, 3));
+    System.out.println(uf.connected(0, 2));
+    System.out.println(uf.connected(0, 3));
 
   }
 

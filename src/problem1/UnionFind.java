@@ -1,19 +1,22 @@
 package problem1;
 
-public class UnionFind {
+import helpers.AlgorithmInit;
+
+public class UnionFind implements AlgorithmInit {
 
   private int[] array;
 
-  public UnionFind(int numOfElements) {
-    this.array = initializeArray(numOfElements);
+
+  public UnionFind() {
+
   }
 
-  public int[] initializeArray(int numOfElements) {
+  public void initializeArray(int numOfElements) {
     int[] nums = new int[numOfElements];
     for (int i = 0; i < numOfElements; i++) {
       nums[i] = i;
     }
-    return nums;
+    this.array = nums;
   }
 
   public void setArray(int[] array) {
@@ -22,8 +25,8 @@ public class UnionFind {
 
 
 
-  public boolean connected(int[] list, int a, int b) {
-    return list[a] == list[b];
+  public boolean connected(int a, int b) {
+    return array[a] == array[b];
   }
 
   public int[] getArray() {
@@ -40,5 +43,14 @@ public class UnionFind {
         array[ix] = b_id;
       }
     }
+  }
+
+  @Override
+  public void init(int base, int upToExponent) {
+    int[] nums = new int[(int) Math.pow(10, upToExponent)];
+    for (int i = 0; i < nums.length; i++) {
+      nums[i] = i;
+    }
+    this.array = nums;
   }
 }

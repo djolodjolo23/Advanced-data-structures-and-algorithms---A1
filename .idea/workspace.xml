@@ -4,13 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68d6ecd5-eb79-4c1d-9b81-2a1f1d15e2c4" name="Changes" comment="Problem 6,7 solved. Needs fine tuning and a nice pdf file to show everything.">
-      <change afterPath="$PROJECT_DIR$/src/helpers/Helper.java" afterDir="false" />
+    <list default="true" id="68d6ecd5-eb79-4c1d-9b81-2a1f1d15e2c4" name="Changes" comment="Working on adding a method for a list of different basses and powers.">
+      <change afterPath="$PROJECT_DIR$/src/helpers/AlgorithmInit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/Helper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helpers/RandomNumbersGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/RandomNumbersGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem1/UnionFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem1/UnionFind.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem2/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem2/WQUnionFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem2/WQUnionFind.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem3/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem3/Timer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem4/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem5/BruteForce3Sum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem5/BruteForce3Sum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem5/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem5/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem6/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem6/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem6/Smart3Sum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem6/Smart3Sum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem7/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem7/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -58,26 +66,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.problem4.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="problem1.Main" />
       <module name="assignment1" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="problem1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="problem2.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="problem2.Main" />
-      <module name="assignment1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="problem2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,6 +106,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="problem6.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="problem6.Main" />
+      <module name="assignment1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="problem6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="problem7.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="problem7.Main" />
       <module name="assignment1" />
@@ -126,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.problem4.Main" />
         <item itemvalue="Application.problem7.Main" />
         <item itemvalue="Application.problem5.Main" />
-        <item itemvalue="Application.problem2.Main" />
+        <item itemvalue="Application.problem6.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -147,6 +155,7 @@
       <workItem from="1694020534655" duration="4431000" />
       <workItem from="1694070711798" duration="7930000" />
       <workItem from="1694181795942" duration="6657000" />
+      <workItem from="1694518208646" duration="1614000" />
     </task>
     <task id="LOCAL-00001" summary="Problem 1 finished.">
       <option name="closed" value="true" />
@@ -196,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694346203712</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Working on adding a method for a list of different basses and powers.">
+      <option name="closed" value="true" />
+      <created>1694452990679</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694452990679</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,32 +237,14 @@
     <MESSAGE value="Problems 3 and 4 completed." />
     <MESSAGE value="Problem 5 solved." />
     <MESSAGE value="Problem 6,7 solved. Needs fine tuning and a nice pdf file to show everything." />
-    <option name="LAST_COMMIT_MESSAGE" value="Problem 6,7 solved. Needs fine tuning and a nice pdf file to show everything." />
+    <MESSAGE value="Working on adding a method for a list of different basses and powers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Working on adding a method for a list of different basses and powers." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/problem4/Main.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/problem1/UnionFind.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/problem1/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/helpers/Helper.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="unionFindList" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

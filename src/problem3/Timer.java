@@ -23,6 +23,8 @@ public class Timer{
     return getElapsedTime();
   }
 
+
+
   private void start() {
     startTime = System.nanoTime();
   }

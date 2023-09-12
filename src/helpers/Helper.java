@@ -1,21 +1,19 @@
 package helpers;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Supplier;
 
 public class Helper {
 
-  public static <T> List<T> getAListOfAlgorithms(Supplier<T> supplier, int base, int power) {
+  public static <T extends AlgorithmInit> List<T> getAListOfAlgorithms(Supplier<T> supplier, int base, int upToExponent) {
     List<T> resultList = new ArrayList<>();
 
-    for (int i = 1; i <= power; i++) {
+    for (int i = 1; i <= upToExponent; i++) {
       T instance = supplier.get();
-      // You can also pass 'base' or any other parameters required by the constructor here.
+      instance.init(base, i);
       resultList.add(instance);
     }
-
     return resultList;
   }
 

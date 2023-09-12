@@ -1,14 +1,16 @@
 package problem2;
 
-public class WQUnionFind {
+import helpers.AlgorithmInit;
+
+public class WQUnionFind implements AlgorithmInit {
   private int[] parent;
   private int[] size;
 
-  public WQUnionFind(int num) {
-    initializeArray(num);
+  public WQUnionFind() {
+
   }
 
-  private void initializeArray(int num) {
+  public void initializeArray(int num) {
     this.parent = new int[num];
     this.size = new int [num];
     for (int i = 0; i < num; i++) {
@@ -61,4 +63,13 @@ public class WQUnionFind {
   }
 
 
+  @Override
+  public void init(int base, int upToExponent) {
+    this.parent = new int[(int) Math.pow(base, upToExponent)];
+    this.size = new int[parent.length];
+    for (int i = 0; i < parent.length; i++) {
+      parent[i] = i;
+      size[i] = 1;
+    }
+  }
 }

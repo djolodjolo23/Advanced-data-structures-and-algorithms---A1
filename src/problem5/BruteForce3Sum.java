@@ -1,14 +1,14 @@
 package problem5;
 
+import helpers.AlgorithmInit;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BruteForce3Sum {
+public class BruteForce3Sum implements AlgorithmInit {
 
   private int[] array;
 
-  public BruteForce3Sum(int num) {
-    this.array = initializeArray(num);
+  public BruteForce3Sum() {
   }
 
   public int[] initializeArray(int numOfElements) {
@@ -22,8 +22,6 @@ public class BruteForce3Sum {
   private void setArray(int[] array) {
     this.array = array;
   }
-
-
 
 
   public List<List<Integer>> findCombinations(int targetValue) {
@@ -44,5 +42,14 @@ public class BruteForce3Sum {
       }
     }
     return solutions;
+  }
+
+  @Override
+  public void init(int base, int upToExponent) {
+    int[] nums = new int[(int) Math.pow(base, upToExponent)];
+    for (int i = 0; i < nums.length; i++) {
+      nums[i] = i;
+    }
+    this.array = nums;
   }
 }

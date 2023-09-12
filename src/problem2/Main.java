@@ -6,7 +6,8 @@ public class Main {
 
   public static void main(String[] args) {
 
-    var uf = new WQUnionFind(7);
+    var uf = new WQUnionFind();
+    uf.initializeArray(7);
 
     uf.makeUnion(1, 2);
 
