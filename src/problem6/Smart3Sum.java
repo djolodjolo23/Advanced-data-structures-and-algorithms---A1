@@ -5,13 +5,16 @@ import helpers.AlgorithmInit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
+import java.util.Random;
 
 public class Smart3Sum implements AlgorithmInit {
 
     private int[] array;
 
-    public Smart3Sum() {
+    private Random random;
 
+    public Smart3Sum() {
+      this.random = new Random();
     }
 
 
@@ -55,7 +58,7 @@ public class Smart3Sum implements AlgorithmInit {
   public void init(int base, int upToExponent) {
     int[] nums = new int[(int) Math.pow(base, upToExponent)];
     for (int i = 0; i < nums.length; i++) {
-      nums[i] = i;
+      nums[i] = random.nextInt((int) Math.pow(base, upToExponent));
     }
     this.array = nums;
   }

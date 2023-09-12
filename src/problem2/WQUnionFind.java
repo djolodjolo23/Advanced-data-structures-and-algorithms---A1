@@ -1,13 +1,16 @@
 package problem2;
 
 import helpers.AlgorithmInit;
+import java.util.Random;
 
 public class WQUnionFind implements AlgorithmInit {
   private int[] parent;
   private int[] size;
 
-  public WQUnionFind() {
+  private Random random;
 
+  public WQUnionFind() {
+    this.random = new Random();
   }
 
   public void initializeArray(int num) {
@@ -68,7 +71,7 @@ public class WQUnionFind implements AlgorithmInit {
     this.parent = new int[(int) Math.pow(base, upToExponent)];
     this.size = new int[parent.length];
     for (int i = 0; i < parent.length; i++) {
-      parent[i] = i;
+      parent[i] = random.nextInt((int) Math.pow(base, upToExponent));
       size[i] = 1;
     }
   }
