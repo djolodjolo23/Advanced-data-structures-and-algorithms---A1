@@ -3,16 +3,13 @@ package problem5;
 import helpers.AlgorithmInit;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class BruteForce3Sum implements AlgorithmInit {
 
   private int[] array;
 
-  private Random random;
 
   public BruteForce3Sum() {
-    this.random = new Random();
   }
 
   public int[] initializeArray(int numOfElements) {
@@ -49,10 +46,10 @@ public class BruteForce3Sum implements AlgorithmInit {
   }
 
   @Override
-  public void init(int base, int upToExponent) {
-    int[] nums = new int[(int) Math.pow(base, upToExponent)];
+  public void init(int num) {
+    int[] nums = new int[num];
     for (int i = 0; i < nums.length; i++) {
-      nums[i] = random.nextInt((int) Math.pow(base, upToExponent));
+      nums[i] = i;
     }
     this.array = nums;
   }

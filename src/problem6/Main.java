@@ -8,7 +8,7 @@ public class Main {
 
     var sm3s = new Smart3Sum();
 
-    sm3s.init(10, 3);
+    sm3s.init(300);
 
     List<List<Integer>> listOfCombinations = sm3s.findCombinations(182);
 

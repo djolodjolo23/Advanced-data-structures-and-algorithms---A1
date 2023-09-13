@@ -3,14 +3,14 @@ package problem2;
 import helpers.AlgorithmInit;
 import java.util.Random;
 
-public class WQUnionFind implements AlgorithmInit {
+public class PCUnionFind implements AlgorithmInit {
   private int[] parent;
   private int[] size;
 
-  private Random random;
 
-  public WQUnionFind() {
-    this.random = new Random();
+
+  public PCUnionFind() {
+
   }
 
   public void initializeArray(int num) {
@@ -67,11 +67,11 @@ public class WQUnionFind implements AlgorithmInit {
 
 
   @Override
-  public void init(int base, int upToExponent) {
-    this.parent = new int[(int) Math.pow(base, upToExponent)];
+  public void init(int num) {
+    this.parent = new int[num];
     this.size = new int[parent.length];
     for (int i = 0; i < parent.length; i++) {
-      parent[i] = random.nextInt((int) Math.pow(base, upToExponent));
+      parent[i] = i;
       size[i] = 1;
     }
   }

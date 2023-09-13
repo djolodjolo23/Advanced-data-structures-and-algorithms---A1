@@ -1,17 +1,15 @@
 package problem1;
 
 import helpers.AlgorithmInit;
-import java.util.Random;
 
 public class UnionFind implements AlgorithmInit {
 
   private int[] array;
 
-  private Random random;
 
 
   public UnionFind() {
-    this.random = new Random();
+
   }
 
   public void initializeArray(int numOfElements) {
@@ -49,10 +47,10 @@ public class UnionFind implements AlgorithmInit {
   }
 
   @Override
-  public void init(int base, int upToExponent) {
-    int[] nums = new int[(int) Math.pow(10, upToExponent)];
+  public void init(int num) {
+    int[] nums = new int[num];
     for (int i = 0; i < nums.length; i++) {
-      nums[i] = random.nextInt((int) Math.pow(10, upToExponent));
+      nums[i] = i;
     }
     this.array = nums;
   }
