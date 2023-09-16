@@ -12,18 +12,6 @@ public class BruteForce3Sum implements AlgorithmInit {
   public BruteForce3Sum() {
   }
 
-  public int[] initializeArray(int numOfElements) {
-    int[] nums = new int[numOfElements];
-    for (int i = 0; i < numOfElements; i++) {
-      nums[i] = i;
-    }
-    return nums;
-  }
-
-  private void setArray(int[] array) {
-    this.array = array;
-  }
-
 
   public List<List<Integer>> findCombinations(int targetValue) {
     List<List<Integer>> solutions = new ArrayList<>();
@@ -44,6 +32,7 @@ public class BruteForce3Sum implements AlgorithmInit {
     }
     return solutions;
   }
+
 
   @Override
   public void init(int num) {

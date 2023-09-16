@@ -13,23 +13,7 @@ public class PCUnionFind implements AlgorithmInit {
 
   }
 
-  public void initializeArray(int num) {
-    this.parent = new int[num];
-    this.size = new int [num];
-    for (int i = 0; i < num; i++) {
-      size[i] = 1;
-      parent[i] = i;
-    }
-  }
 
-  public void setArray(int[] array) {
-    this.parent = new int[array.length];
-    this.size = new int[array.length];
-    for (int i = 0; i < array.length; i++) {
-      parent[i] = array[i];
-      size[i] = 1;
-    }
-  }
 
 
   public int[] getParent() {
@@ -40,8 +24,8 @@ public class PCUnionFind implements AlgorithmInit {
     return size;
   }
 
-  public boolean connected(int[] list, int a, int b) {
-    return list[a] == list[b];
+  public boolean connected(int a, int b) {
+    return parent[a] == parent[b];
   }
 
   public int findRoot (int element) {

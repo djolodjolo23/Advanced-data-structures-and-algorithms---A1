@@ -3,25 +3,21 @@ package problem4;
 import helpers.CSVExporter;
 import helpers.Helper;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import problem1.UnionFind;
 import problem2.PCUnionFind;
 import problem3.Timer;
 
-public class Main {
+public class testing {
 
   public static void main(String[] args) {
-
     var csvExporter = new CSVExporter();
 
     var random = new Random();
 
     int upTo = 100000;
     int step = 5000;
-
-    int[] x_values = new int[upTo/step];
 
     List<UnionFind> unionFindList = Helper.getAListOfAlgorithmsLinear(UnionFind::new, upTo, step);
     List<PCUnionFind> PCUnionFindList = Helper.getAListOfAlgorithmsLinear(PCUnionFind::new, upTo, step);
@@ -41,6 +37,10 @@ public class Main {
         long connected_time = timer.timeItNanoTime(() -> uf.connected(element_a, element_b));
         makeUnion_times.add(mu_time);
         connected_times.add(connected_time);
+
+          //System.out.println(connected_time);
+
+
         counter++;
       }
       counter = 1;
@@ -62,6 +62,10 @@ public class Main {
         long connected_time = timer.timeItNanoTime(() -> pcuf.connected(element_a, element_b));
         makeUnion_times.add(mu_time);
         connected_times.add(connected_time);
+        if (i < 1) {
+          System.out.println(connected_time);
+
+        }
         counter++;
       }
       counter = 1;
@@ -69,40 +73,6 @@ public class Main {
       all_pcuf_connected_times.add(connected_times);
     }
 
-    long[] average_uf_makeUnion_times = timer.findAverageRunningTime(all_uf_makeUnion_times);
-    long[] average_uf_connected_time = timer.findAverageRunningTime(all_uf_connected_times);
-    long[] average_pcuf_makeUnion_times = timer.findAverageRunningTime(all_pcuf_makeUnion_times);
-    long[] average_pcuf_connected_times = timer.findAverageRunningTime(all_pcuf_connected_times);
-
-
-
-
-    int[] num_of_unions = Helper.createXValuesArray(upTo, step);
-
-
-
-    double[] slopes1 = Helper.getAllSlopes(average_uf_makeUnion_times, upTo, step);
-
-
-    double[] intercepts = Helper.getAllIntercepts(slopes1, average_uf_makeUnion_times, x_values);
-
-
-
-    double avgSlope = Helper.findAverage(slopes1);
-    double avgIntercept = Helper.findAverage(intercepts);
-
-
-    System.out.println("Slopes: " + Arrays.toString(slopes1));
-    System.out.println("Intercepts: " + Arrays.toString(intercepts));
-    System.out.println("Average slope= " + avgSlope);
-    System.out.println("Average intercept= " + avgIntercept);
-
-    csvExporter.exportToCSV(average_uf_makeUnion_times, "uf_makeUnion_timing_result.csv", ";");
-    csvExporter.exportToCSV(average_uf_connected_time, "uf_connected_timing_result.csv", ";");
-    csvExporter.exportToCSV(average_pcuf_makeUnion_times, "pcuf_makeUnion_timing_result.csv", ";");
-    csvExporter.exportToCSV(average_pcuf_connected_times, "pcuf_connected_timing_result.csv", ";");
-
   }
-
 
 }

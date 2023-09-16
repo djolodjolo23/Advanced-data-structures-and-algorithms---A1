@@ -16,18 +16,6 @@ public class Smart3Sum implements AlgorithmInit {
     }
 
 
-    public int[] initializeArray(int numOfElements) {
-        int[] nums = new int[numOfElements];
-        for (int i = 0; i < numOfElements; i++) {
-            nums[i] = i;
-        }
-        return nums;
-    }
-
-    private void setArray(int[] array) {
-        this.array = array;
-    }
-
     public List<List<Integer>> findCombinations(int target) {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(array);
@@ -35,7 +23,6 @@ public class Smart3Sum implements AlgorithmInit {
         for (int i = 0; i < array.length - 2; i++) {
             int left = i + 1;
             int right = array.length - 1;
-
             while (left < right) {
                 int sum = array[i] + array[left] + array[right];
                 if (sum == target) {

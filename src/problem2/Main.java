@@ -6,24 +6,30 @@ public class Main {
 
   public static void main(String[] args) {
 
-    var uf = new WQUnionFind();
-    uf.initializeArray(7);
+    var pcuf = new PCUnionFind();
+    pcuf.init(7);
 
-    uf.makeUnion(1, 2);
+    pcuf.makeUnion(1, 2);
 
-    System.out.println(Arrays.toString(uf.getSize()) + Arrays.toString(uf.getParent()));
+    System.out.println(Arrays.toString(pcuf.getSize()) + Arrays.toString(pcuf.getParent()));
 
-    uf.makeUnion(3, 4);
+    pcuf.makeUnion(3, 4);
 
-    System.out.println(Arrays.toString(uf.getSize()) + Arrays.toString(uf.getParent()));
+    System.out.println(Arrays.toString(pcuf.getSize()) + Arrays.toString(pcuf.getParent()));
 
-    uf.makeUnion(1, 2);
+    pcuf.makeUnion(1, 2);
 
-    System.out.println(Arrays.toString(uf.getSize()) + Arrays.toString(uf.getParent()));
+    System.out.println(Arrays.toString(pcuf.getSize()) + Arrays.toString(pcuf.getParent()));
 
-    uf.makeUnion(6, 3);
+    pcuf.makeUnion(6, 3);
 
-    System.out.println(Arrays.toString(uf.getSize()) + Arrays.toString(uf.getParent()));
+    System.out.println(Arrays.toString(pcuf.getSize()) + Arrays.toString(pcuf.getParent()));
+
+    System.out.println(pcuf.connected(6,3));
+
+    System.out.println(pcuf.connected(6,4));
+
+
 
   }
 

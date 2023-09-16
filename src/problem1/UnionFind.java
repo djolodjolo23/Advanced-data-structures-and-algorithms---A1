@@ -12,19 +12,6 @@ public class UnionFind implements AlgorithmInit {
 
   }
 
-  public void initializeArray(int numOfElements) {
-    int[] nums = new int[numOfElements];
-    for (int i = 0; i < numOfElements; i++) {
-      nums[i] = i;
-    }
-    this.array = nums;
-  }
-
-  public void setArray(int[] array) {
-    this.array = array;
-  }
-
-
 
   public boolean connected(int a, int b) {
     return array[a] == array[b];
@@ -34,9 +21,9 @@ public class UnionFind implements AlgorithmInit {
     return array;
   }
 
-  public void makeUnion(int a, int b) {
-    int a_id = array[a];
-    int b_id = array[b];
+  public void makeUnion(int element_a, int element_b) {
+    int a_id = array[element_a];
+    int b_id = array[element_b];
 
     for (int ix = 0; ix < array.length; ix++) {
       int value = array[ix];

@@ -11,8 +11,9 @@ public class Main {
     bf3s.init(300);
 
     List<List<Integer>> listOfCombinations = bf3s.findCombinations(182);
-
     System.out.println(listOfCombinations.size());
+    System.out.println(listOfCombinations);
+
   }
 
 }

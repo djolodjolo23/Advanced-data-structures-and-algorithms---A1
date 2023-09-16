@@ -4,22 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68d6ecd5-eb79-4c1d-9b81-2a1f1d15e2c4" name="Changes" comment="Added a random number generator in init() method for every algorithm.">
-      <change afterPath="$PROJECT_DIR$/src/helpers/CSVExporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/Point.java" afterDir="false" />
+    <list default="true" id="68d6ecd5-eb79-4c1d-9b81-2a1f1d15e2c4" name="Changes" comment="A lot of changes.">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/problem4/testing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/problem7/testing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/AlgorithmInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/AlgorithmInit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/helpers/Helper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/Helper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/RandomNumbersGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/RandomNumbersGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/problem1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem1/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/Point.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem1/UnionFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem1/UnionFind.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/problem2/WQUnionFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem2/PCUnionFind.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/problem3/Timer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem3/Timer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/problem2/PCUnionFind.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem2/PCUnionFind.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem4/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem5/BruteForce3Sum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem5/BruteForce3Sum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem5/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem5/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/problem6/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem6/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem6/Smart3Sum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem6/Smart3Sum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/problem7/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/problem7/Main.java" afterDir="false" />
     </list>
@@ -39,6 +37,23 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;djolodjolo23&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="21b1c55e-715c-46c6-baf3-293556bf7f9f" />
+        <option name="url" value="https://github.com/djolodjolo23/1dv516-assignment1" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -68,13 +83,13 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.problem4.Main">
+  <component name="RunManager" selected="Application.problem5.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="problem1.Main" />
+      <option name="MAIN_CLASS_NAME" value="problem6.Main" />
       <module name="assignment1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="problem1.*" />
+          <option name="PATTERN" value="problem6.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -82,12 +97,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="problem4.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="problem4.Main" />
+    <configuration name="problem2.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="problem2.Main" />
       <module name="assignment1" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="problem4.*" />
+          <option name="PATTERN" value="problem2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,19 +123,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="problem6.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="problem6.Main" />
-      <module name="assignment1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="problem6.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="problem7.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="problem7.Main" />
       <module name="assignment1" />
@@ -134,13 +136,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="problem7.testing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="problem7.testing" />
+      <module name="assignment1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="problem7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.problem4.Main" />
-        <item itemvalue="Application.problem7.Main" />
         <item itemvalue="Application.problem5.Main" />
-        <item itemvalue="Application.problem6.Main" />
+        <item itemvalue="Application.problem7.testing" />
+        <item itemvalue="Application.problem7.Main" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.problem2.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -157,7 +172,8 @@
       <workItem from="1694020534655" duration="4431000" />
       <workItem from="1694070711798" duration="7930000" />
       <workItem from="1694181795942" duration="6657000" />
-      <workItem from="1694518208646" duration="21528000" />
+      <workItem from="1694518208646" duration="61785000" />
+      <workItem from="1694857191965" duration="17717000" />
     </task>
     <task id="LOCAL-00001" summary="Problem 1 finished.">
       <option name="closed" value="true" />
@@ -231,7 +247,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694520315305</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="A lot of changes.">
+      <option name="closed" value="true" />
+      <created>1694615776558</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1694615776558</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,15 +282,36 @@
     <MESSAGE value="Working on adding a method for a list of different basses and powers." />
     <MESSAGE value="Implemented bunch of things :D" />
     <MESSAGE value="Added a random number generator in init() method for every algorithm." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a random number generator in init() method for every algorithm." />
+    <MESSAGE value="A lot of changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="A lot of changes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/problem4/Main.java</url>
-          <line>69</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/src/problem2/PCUnionFind.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/problem4/testing.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/helpers/Helper.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/problem7/Main.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/problem7/Main.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

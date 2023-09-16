@@ -1,19 +1,19 @@
 package helpers;
 
 public class Point {
-  private long first;
-  private int second;
+  private long y;
+  private int x;
 
-  public Point(long first, int second) {
-    this.first = first;
-    this.second = second;
+  public Point(int x, long y) {
+    this.x = x;
+    this.y = y;
   }
 
-  public long getFirst() {
-    return first;
+  public int getFirst() {
+    return x;
   }
 
-  public int getSecond() {
-    return second;
+  public long getSecond() {
+    return y;
   }
 }
