@@ -3,19 +3,14 @@ package problem2;
 import helpers.AlgorithmInit;
 import java.util.Random;
 
+/**
+ * Union find with path compression.
+ */
 public class PCUnionFind implements AlgorithmInit {
   private int[] parent;
   private int[] size;
-
-
-
   public PCUnionFind() {
-
   }
-
-
-
-
   public int[] getParent() {
     return parent;
   }

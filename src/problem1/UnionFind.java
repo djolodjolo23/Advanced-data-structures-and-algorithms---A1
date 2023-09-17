@@ -2,16 +2,15 @@ package problem1;
 
 import helpers.AlgorithmInit;
 
+/**
+ * Simple UnionFind.
+ */
 public class UnionFind implements AlgorithmInit {
 
   private int[] array;
 
-
-
   public UnionFind() {
-
   }
-
 
   public boolean connected(int a, int b) {
     return array[a] == array[b];

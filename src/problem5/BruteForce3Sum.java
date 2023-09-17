@@ -4,6 +4,9 @@ import helpers.AlgorithmInit;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Brute force 3 sum algorithm.
+ */
 public class BruteForce3Sum implements AlgorithmInit {
 
   private int[] array;

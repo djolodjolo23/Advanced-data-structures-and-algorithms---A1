@@ -10,8 +10,12 @@ import problem3.Timer;
 import problem5.BruteForce3Sum;
 import problem6.Smart3Sum;
 
+
 public class Main {
 
+  /**
+   * It is a bit messy but all the data is in the report :)
+   */
     public static void main(String[] args) {
 
       int doubleTimes = 6;
@@ -65,17 +69,14 @@ public class Main {
 
 
 
-      double[] slopes_bf3s = Helper.getAllSlopesLog(all_bf3s_findCombination_times, doubleTimes, start);
+      double[] slopes_bf3s = Helper.getAllSlopesLog(all_bf3s_findCombination_times, x_values);
 
-      double[] slopes_s3s = Helper.getAllSlopesLog(average_s3s_findCombination_times, doubleTimes, start);
+      double[] slopes_s3s = Helper.getAllSlopesLog(average_s3s_findCombination_times, x_values);
 
-      double[] intercepts_bf3s = Helper.getAllInterceptsLog(slopes_bf3s, all_bf3s_findCombination_times, doubleTimes, start);
+      double[] intercepts_bf3s = Helper.getAllInterceptsLog(slopes_bf3s, all_bf3s_findCombination_times, x_values);
 
-      double[] intercepts_s3s = Helper.getAllInterceptsLog(slopes_s3s, average_s3s_findCombination_times, doubleTimes, start);
+      double[] intercepts_s3s = Helper.getAllInterceptsLog(slopes_s3s, average_s3s_findCombination_times, x_values);
 
-      double[] bf3s_ratios = Helper.getRatiosLog(all_bf3s_findCombination_times);
-
-      double[] s3s_ratios = Helper.getRatiosLog(average_s3s_findCombination_times);
 
 
       double avgSlope_bf3s = Helper.findAverage(slopes_bf3s);
@@ -100,12 +101,6 @@ public class Main {
 
       System.out.println("s3s intercepts: " + Arrays.toString(average_s3s_findCombination_times));
 
-      System.out.println("BF3s ratios: " + (Arrays.toString(bf3s_ratios)));
-      System.out.println("Average bf3s ratio:" + Arrays.toString(new double[]{Helper.findAverage(bf3s_ratios)}));
-
-
-      System.out.println("3s3 ratios: " + Arrays.toString(s3s_ratios));
-      System.out.println("Average bf3s ratio: " + Arrays.toString(new double[] {Helper.findAverage(s3s_ratios)}));
 
 
 

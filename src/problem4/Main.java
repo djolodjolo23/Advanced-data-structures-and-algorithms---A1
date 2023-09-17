@@ -12,14 +12,17 @@ import problem3.Timer;
 
 public class Main {
 
+  /**
+   * It is a bit messy but all the data is in the report :)
+   */
   public static void main(String[] args) {
 
     var csvExporter = new CSVExporter();
 
     var random = new Random();
 
-    int upTo = 100000;
-    int step = 5000;
+    int upTo = 2000;
+    int step = 1000;
 
     int[] x_values = new int[upTo/step];
 
@@ -77,11 +80,8 @@ public class Main {
 
 
 
-    int[] num_of_unions = Helper.createXValuesArray(upTo, step);
 
-
-
-    double[] slopes1 = Helper.getAllSlopes(average_uf_makeUnion_times, upTo, step);
+    double[] slopes1 = Helper.getAllSlopes(average_uf_makeUnion_times, x_values);
 
 
     double[] intercepts = Helper.getAllIntercepts(slopes1, average_uf_makeUnion_times, x_values);

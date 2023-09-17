@@ -1,5 +1,11 @@
 - The src package contains sub-packages for each problem. In each sub-package there is a main class with a main method inside where 
 the code can be compiled and executed.
+- Helper and Timer classes are responsible for calculations and time measurements. 
+- AlgorithmInit is an interface implemented by all the algorithms with init() method, to be able to use it when working with generic method for creating a list of algorithms with different array sizes.
+- CSVExporter is a class I used for exporting the data to csv file and using it for graphs and report.
+- Testing classes can be ignored, I used these to perform tests on different array sizes.
+
+
 - Problem 1:
   - Union find object is created and the array is initiated with the init() method. The method makeUnion() or connected() 
   can be called for any two elements in the array.

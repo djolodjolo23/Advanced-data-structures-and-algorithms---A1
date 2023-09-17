@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 
+/**
+ * Smart 3 sum with left and right pointers.
+ */
 public class Smart3Sum implements AlgorithmInit {
 
     private int[] array;
@@ -14,8 +17,6 @@ public class Smart3Sum implements AlgorithmInit {
     public Smart3Sum() {
 
     }
-
-
     public List<List<Integer>> findCombinations(int target) {
         List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(array);

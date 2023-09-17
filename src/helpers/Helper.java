@@ -54,18 +54,15 @@ public class Helper {
     return (log2y1 - log2y0) / (log2x1 - log2x0);
   }
 
-  public static double[] getAllSlopesLog(long[] times, int doubleTimes, int start) {
-    int[] num_of_unions = Helper.createXValuesArrayExponential(doubleTimes, start);
-    double[] slopes = new double[num_of_unions.length - 1];
+  public static double[] getAllSlopesLog(long[] times, int[] x_values) {
+    double[] slopes = new double[x_values.length - 1];
     for (int i=0; i<slopes.length; i++) {
-      var point1 = new Point(num_of_unions[i], times[i]);
-      var point2 = new Point(num_of_unions[i + 1], times[i + 1]);
+      var point1 = new Point(x_values[i], times[i]);
+      var point2 = new Point(x_values[i + 1], times[i + 1]);
       slopes[i] = Helper.findSingleSlopeLog(point1, point2);
     }
     return slopes;
   }
-
-
 
 
   public static double findIntercept(double slope, Point point) {
@@ -93,42 +90,42 @@ public class Helper {
     return intercepts;
   }
 
-  public static double[] getAllInterceptsLog(double[] slopes, long[] times,  int doubleTimes, int start) {
-    int[] num_of_unions = Helper.createXValuesArrayExponential(doubleTimes, start);
-    double[] intercepts = new double[num_of_unions.length - 1];
+  public static double[] getAllInterceptsLog(double[] slopes, long[] times, int[] x_values) {
+    double[] intercepts = new double[x_values.length - 1];
     for (int i=0; i < slopes.length; i++) {
-      Point point = new Point(num_of_unions[i], times[i]);
+      Point point = new Point(x_values[i], times[i]);
       intercepts[i] = findInterceptLog(slopes[i], point);
     }
     return intercepts;
   }
 
+  public static double[] convertToLog2(double[] list) {
+    if (list == null) {
+      throw new IllegalArgumentException("Input list cannot be null");
+    }
+    double[] result = new double[list.length];
+    for (int i=0; i<list.length; i++) {
+      result[i] = Math.log(list[i] / Math.log(2));
+    }
+    return result;
+  }
 
-  public static double[] getAllSlopes(long[] times, int upTo, int step) {
-    int[] num_of_unions = Helper.createXValuesArray(upTo, step);
-    double[] slopes = new double[num_of_unions.length];
-    for (int i=0; i<num_of_unions.length; i++) {
+
+  public static double[] getAllSlopes(long[] times, int[] x_values) {
+    double[] slopes = new double[x_values.length];
+    for (int i=0; i<x_values.length; i++) {
       Point point1;
       if (i == 0) {
         point1 = new Point(0, 0);
       } else {
-        point1 = new Point(num_of_unions[i - 1], times[i - 1]);
+        point1 = new Point(x_values[i - 1], times[i - 1]);
       }
-      var point2 = new Point(num_of_unions[i], times[i]);
+      var point2 = new Point(x_values[i], times[i]);
       slopes[i] = Helper.findSingleSlope(point1, point2);
     }
     return slopes;
   }
 
-  public static int[] createXValuesArray(int upTo, int step) {
-    int[] numOfUnions = new int[upTo/step];
-    int counter = 0;
-    for (int i=step; i<= upTo; i+= step) {
-      numOfUnions[counter] = i;
-      counter++;
-    }
-    return numOfUnions;
-  }
 
   public static double findAverage(double[] list) {
     double sum = 0.0;
@@ -147,24 +144,5 @@ public class Helper {
     }
     return array;
   }
-
-  public static double[] getRatiosLog(long[] times) {
-    double[] ratios = new double[times.length - 1];
-    for (int i = 0; i < ratios.length; i++) {
-      double ratio = ((double) times[i + 1] / times[i]);
-      ratios[i] = Math.log((double) times[i + 1] / times[i]) / Math.log(2.0);
-      if (i == ratios.length - 1) {
-        break;
-      }
-    }
-    return ratios;
-  }
-
-
-
-
-
-
-
 
 }
